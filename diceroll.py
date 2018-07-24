@@ -2,11 +2,7 @@ from random import randint as rand
 
 
 def roll(rolls, sides=6):
-    results = []
-    while rolls > 0:
-        results.append(rand(1, sides))
-        rolls -= 1
-    return results
+    return [rand(1, sides) for i in range(0, rolls)]
 
 
 print("Welcome to the dice rolling simluator.")
